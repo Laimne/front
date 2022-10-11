@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
-import Suppliers from'../es';
-import Create from'../es';
+import Suppliers from'../Contexts/Suppliers';
+import Create from'../es/Create';
 import axios from 'axios';
+
+
+
 
 function Main() {
 
@@ -9,7 +12,7 @@ function Main() {
     const [suppliers, setSuppliers] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:3003/server/suppliers/')
+        axios.get('http://localhost:3003/server/suppliers')
         .then(res => {
             setSuppliers(res.data);
         })
@@ -19,7 +22,7 @@ function Main() {
         if (null === createData) {
             return;
         }
-        axios.post('http://localhost:3003/server/suppliers/', createData)
+        axios.post('http://localhost:3003/server/suppliers', createData)
         .then(res => {
 
         });

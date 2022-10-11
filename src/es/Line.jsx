@@ -22,3 +22,4 @@ function Line({ supplier }) {
         </li>
     )
 }
+export default Line;

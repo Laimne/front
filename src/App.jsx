@@ -2,8 +2,9 @@ import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nav from './Components/Nav';
 import Home from './Components/Home';
-import MainSup from './es/Main';
-import MainCons from './es/Main';
+import Main from './es/Main';
+
+
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <Nav />
       <Routes>
         <Route path="home" element={<Home/>}></Route>
-        <Route path="suppliers" element={<MainSup/>}></Route>
-        <Route path="consumers" element={<MainCons/>}></Route>
+        <Route path="Suppliers" element={<Main/>}></Route>
+        <Route path="Consumers" element={<Main/>}></Route>
+       
       </Routes>
     </BrowserRouter>
   );
